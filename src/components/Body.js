@@ -1,12 +1,16 @@
 import React from "react";
-import MainContainer from "./MainContainer";
+import { Outlet } from "react-router-dom";
+import LeftNav from "./LeftNav";
+// import MainContainer from "./MainContainer";
 import Sidebar from "./Sidebar";
 
 const Body = () => {
   return (
-    <div className="grid grid-flow-col">
+    <div className="grid grid-flow-col relative">
       <Sidebar />
-      <MainContainer />
+      <LeftNav />
+      {/* <MainContainer /> */}
+      <Outlet />
     </div>
   );
 };
